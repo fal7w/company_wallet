@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-24 13:32:12.238037",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_pj56b",
+  "server_url",
+  "column_break_vmwt",
+  "role_allowed_to_update_api_wallet",
+  "authentication_section",
+  "authentication_type",
+  "skip_ssl_verify",
+  "column_break_fnex",
+  "user_name",
+  "password"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_pj56b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "server_url",
+   "fieldtype": "Data",
+   "label": "Server URL",
+   "options": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authentication_section",
+   "fieldtype": "Section Break",
+   "label": "Authentication"
+  },
+  {
+   "fieldname": "authentication_type",
+   "fieldtype": "Select",
+   "label": "Authentication Type",
+   "options": "Basic\nToken\nAPI Key"
+  },
+  {
+   "depends_on": "eval: doc.authentication_type != \"Token\"",
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name",
+   "mandatory_depends_on": "eval: doc.authentication_type != \"Token\""
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fnex",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "skip_ssl_verify",
+   "fieldtype": "Check",
+   "label": "Skip SSL Verify"
+  },
+  {
+   "fieldname": "column_break_vmwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "System Manager",
+   "fieldname": "role_allowed_to_update_api_wallet",
+   "fieldtype": "Link",
+   "label": "Role Allowed To Update API Wallet",
+   "options": "Role"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-03-20 20:59:03.300250",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company Wallet Configration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

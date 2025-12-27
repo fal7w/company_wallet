@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-12 14:32:31.978347",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wlda",
+  "naming_series",
+  "title",
+  "payment_channel",
+  "remittance_provider",
+  "wallet_provider",
+  "column_break_n8ie",
+  "wallet_company",
+  "total_amount",
+  "currency",
+  "bulk_payment_detail_section",
+  "bulk_payment_detail",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wlda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_channel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Channel",
+   "options": "Payment Channel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bulk_payment_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Bulk Payment Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "bulk_payment_detail",
+   "fieldtype": "Table",
+   "label": "Bulk Payment Details",
+   "options": "Bulk Payment Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "label": "Wallet Company",
+   "options": "Wallet Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "BULK-.YYYY.-"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n8ie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "fieldname": "remittance_provider",
+   "fieldtype": "Link",
+   "label": "Remittance Provider",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "options": "Remittance Provider"
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Wallet Transfer\"",
+   "fetch_from": "wallet_company.wallet_provider",
+   "fieldname": "wallet_provider",
+   "fieldtype": "Data",
+   "label": "Wallet Provider",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-30 12:10:53.688447",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Bulk Payment Template",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  }
+ ],
+ "search_fields": "title",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}

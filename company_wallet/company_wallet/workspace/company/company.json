@@ -1,0 +1,229 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Yv6h6eKOi2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Welcome <br></b></span>\",\"col\":12}},{\"id\":\"zmm9OIh7yO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Company User\",\"col\":4}},{\"id\":\"xhabgCGIgU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Payments\",\"col\":4}},{\"id\":\"rbG76zZHfO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Bulk Payments\",\"col\":4}},{\"id\":\"XaONl9KTFK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Wallet Bulk Payment\",\"col\":3}},{\"id\":\"TjKixulVSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Wallet Payment\",\"col\":3}},{\"id\":\"7wzuUVVEWA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Company</span>\",\"col\":12}},{\"id\":\"hfuUGZ-2Jq\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"KEl5AGbqkQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Transaction\",\"col\":4}},{\"id\":\"kz7Tsq1sEa\",\"type\":\"card\",\"data\":{\"card_name\":\"Report\",\"col\":4}}]",
+ "creation": "2024-03-13 13:33:45.764497",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "dialpad",
+ "idx": 1,
+ "indicator_color": "darkgrey",
+ "is_hidden": 0,
+ "label": "Company",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Company",
+   "link_count": 0,
+   "link_to": "Wallet Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet User",
+   "link_count": 0,
+   "link_to": "Wallet User",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": " Multi Authorization Rule",
+   "link_count": 0,
+   "link_to": "Multi Authorization Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transaction",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": " Bulk Payment Template",
+   "link_count": 0,
+   "link_to": "Bulk Payment Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Bulk Payment",
+   "link_count": 0,
+   "link_to": "Wallet Bulk Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Payment",
+   "link_count": 0,
+   "link_to": "Wallet Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Payment Log",
+   "link_count": 0,
+   "link_to": "Wallet Payment Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Query Reference",
+   "link_count": 0,
+   "link_to": "Payment Query Reference",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bulk Edit Download Template",
+   "link_count": 0,
+   "link_to": "Bulk Edit Download Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Wallet Company Balance",
+   "link_count": 0,
+   "link_to": "Wallet Company Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Wallet Company Statement",
+   "link_count": 0,
+   "link_to": "Wallet Company Statement",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Wallet User Transaction Log",
+   "link_count": 0,
+   "link_to": "Wallet User Transaction Log",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Wallet Company Account Statement",
+   "link_count": 0,
+   "link_to": "Wallet Company Account Statement",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-04 12:13:49.513220",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company",
+ "number_cards": [
+  {
+   "label": "Company User",
+   "number_card_name": "User"
+  },
+  {
+   "label": "Payments",
+   "number_card_name": "Payment"
+  },
+  {
+   "label": "Bulk Payments",
+   "number_card_name": "Bulk Payment"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Wallet Admin"
+  },
+  {
+   "role": "Wallet Maker"
+  },
+  {
+   "role": "Wallet Checker"
+  },
+  {
+   "role": "Wallet Reviewer"
+  }
+ ],
+ "sequence_id": 9.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Wallet Payment",
+   "link_to": "Wallet Payment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Wallet Bulk Payment",
+   "link_to": "Wallet Bulk Payment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Company"
+}

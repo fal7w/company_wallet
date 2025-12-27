@@ -1,0 +1,7 @@
+company_wallet.patches.initials_currency_list
+company_wallet.patches.set_role_profiles
+company_wallet.patches.add_wallet_company_to_user
+company_wallet.patches.dump_updated_wc
+execute:frappe.defaults.clear_default("wallet_company")
+execute:frappe.db.set_single_value("Wallet Company Settings", "bulk_edit_child_table" ,"EXCEL & CSV")
+execute:frappe.db.sql("""UPDATE `tabWallet Payment` SET recipient = customer WHERE docstatus = 1 AND IFNULL(recipient, '') != IFNULL(customer, '')""")

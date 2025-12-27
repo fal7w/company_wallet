@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-28 15:39:45.423943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3d8h",
+  "naming_series",
+  "posting_date",
+  "modified_date",
+  "column_break_phme",
+  "wallet_company",
+  "user_owner",
+  "modified_by1",
+  "section_break_fzrm",
+  "transaction_type",
+  "transaction_link",
+  "device_details_section",
+  "device_id",
+  "device_type",
+  "column_break_pgp0",
+  "ip_address",
+  "os",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3d8h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "label": "Device ID"
+  },
+  {
+   "fieldname": "device_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Device Type"
+  },
+  {
+   "fieldname": "os",
+   "fieldtype": "Data",
+   "label": "OS",
+   "length": 500
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "transaction_link",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Link",
+   "options": "transaction_type"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Device Info Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series",
+   "options": "CW-DIL-.YYYY.-."
+  },
+  {
+   "fieldname": "section_break_fzrm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company"
+  },
+  {
+   "fieldname": "device_details_section",
+   "fieldtype": "Section Break",
+   "label": "Device Details"
+  },
+  {
+   "fieldname": "column_break_pgp0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_phme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user_owner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User Owner"
+  },
+  {
+   "fieldname": "modified_by1",
+   "fieldtype": "Data",
+   "label": "Modified By"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "modified_date",
+   "fieldtype": "Datetime",
+   "label": "Modified Date"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-14 11:08:35.695586",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Device Info Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

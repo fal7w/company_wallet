@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-29 12:03:41.651795",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o6vm",
+  "naming_series",
+  "wallet_company",
+  "createtime",
+  "amount_details_section",
+  "debit_amount",
+  "credit_amount",
+  "currency",
+  "column_break_tsgj",
+  "commission_debit",
+  "commission_credit",
+  "remark",
+  "transaction_details_section",
+  "transaction_type",
+  "issuertrxref",
+  "refid",
+  "column_break_z7um",
+  "walletdest",
+  "walletsrc",
+  "status",
+  "receiver_senderdata_section",
+  "r_firstname",
+  "r_grandfathername",
+  "r_familyname",
+  "receiver_phone_number",
+  "column_break_nkqk",
+  "s_firstname",
+  "s_fathername",
+  "s_grandfathername",
+  "s_familyname",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o6vm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "createtime",
+   "fieldtype": "Datetime",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "debit_amount",
+   "fieldtype": "Currency",
+   "label": "Debit Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "credit_amount",
+   "fieldtype": "Currency",
+   "label": "Credit Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "Transaction Type"
+  },
+  {
+   "bold": 1,
+   "fieldname": "issuertrxref",
+   "fieldtype": "Data",
+   "label": "Transaction Issuer Reference"
+  },
+  {
+   "bold": 1,
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "receiver_senderdata_section",
+   "fieldtype": "Section Break",
+   "label": "Receiver/ Sender Data"
+  },
+  {
+   "fieldname": "r_firstname",
+   "fieldtype": "Data",
+   "label": "Receiver First Name"
+  },
+  {
+   "fieldname": "r_familyname",
+   "fieldtype": "Data",
+   "label": "Receiver Family Name"
+  },
+  {
+   "fieldname": "s_firstname",
+   "fieldtype": "Data",
+   "label": "Sender First Name"
+  },
+  {
+   "fieldname": "s_fathername",
+   "fieldtype": "Data",
+   "label": "Sender Father Name"
+  },
+  {
+   "fieldname": "s_familyname",
+   "fieldtype": "Data",
+   "label": "Sender Family Name"
+  },
+  {
+   "fieldname": "receiver_phone_number",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Receiver Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "amount_details_section",
+   "fieldtype": "Section Break",
+   "label": "Amount Details"
+  },
+  {
+   "fieldname": "transaction_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Details"
+  },
+  {
+   "fieldname": "refid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "refId"
+  },
+  {
+   "fieldname": "column_break_z7um",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "walletdest",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Destination"
+  },
+  {
+   "fieldname": "walletsrc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Source"
+  },
+  {
+   "fieldname": "column_break_nkqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series",
+   "options": "CW-ACC-.YYYY.-."
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wallet Company Transaction Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "r_grandfathername",
+   "fieldtype": "Data",
+   "label": "Receiver GrandFather Name"
+  },
+  {
+   "fieldname": "s_grandfathername",
+   "fieldtype": "Data",
+   "label": "Sender GrandFather Name"
+  },
+  {
+   "fieldname": "column_break_tsgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_debit",
+   "fieldtype": "Currency",
+   "label": "Commission Debit"
+  },
+  {
+   "fieldname": "commission_credit",
+   "fieldtype": "Currency",
+   "label": "Commission Credit"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-14 11:11:09.410987",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Company Transaction Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Wallet Admin"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

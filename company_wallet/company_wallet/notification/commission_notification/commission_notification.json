@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "",
+ "creation": "2024-05-16 09:41:06.025501",
+ "custom_firebase_notification": 1,
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Wallet Bulk Payment",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Calculation commissions have been done!",
+ "modified": "2024-05-16 10:17:14.882893",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Commission Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "commission - {{ doc.name }}",
+ "value_changed": "total_fee"
+}

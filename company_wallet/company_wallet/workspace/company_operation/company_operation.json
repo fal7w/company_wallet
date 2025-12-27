@@ -1,0 +1,139 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"rmugfNYoAu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Users\",\"col\":4}},{\"id\":\"5MG7Cc_VKf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Companies\",\"col\":4}},{\"id\":\"ZNVM_XhSFw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Company Operation</span>\",\"col\":12}},{\"id\":\"6JhBd41f_T\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"RtsL4fMQe6\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Setup\",\"col\":4}}]",
+ "creation": "2024-03-13 13:32:10.638844",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "unhide",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Company Operation",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company Wallet Configration",
+   "link_count": 0,
+   "link_to": "Company Wallet Configration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Company Settings",
+   "link_count": 0,
+   "link_to": "Wallet Company Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Channel",
+   "link_count": 0,
+   "link_to": "Payment Channel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Remittance Provider",
+   "link_count": 0,
+   "link_to": "Remittance Provider",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wallet Company",
+   "link_count": 0,
+   "link_to": "Wallet Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Setup",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company Location",
+   "link_count": 0,
+   "link_to": "Company Location",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Offer Type",
+   "link_count": 0,
+   "link_to": "Offer Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": " Offer Detail",
+   "link_count": 0,
+   "link_to": "Offer Detail",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-03-25 12:28:42.836085",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company Operation",
+ "number_cards": [
+  {
+   "label": "Users",
+   "number_card_name": "User"
+  },
+  {
+   "label": "Companies",
+   "number_card_name": "Wallet Company"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 8.0,
+ "shortcuts": [],
+ "title": "Company Operation"
+}

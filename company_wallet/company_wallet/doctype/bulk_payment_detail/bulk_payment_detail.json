@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "creation": "2024-02-12 14:35:00.026778",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_v8ws",
+  "recipient",
+  "amount",
+  "recipient_phone",
+  "remark",
+  "directory"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_v8ws",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "directory",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_preview": 1,
+   "label": "Directory"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-24 11:17:25.261788",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Bulk Payment Detail",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

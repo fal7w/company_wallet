@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.docstatus==1",
+ "creation": "2024-04-14 13:34:08.581470",
+ "custom_firebase_notification": 1,
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Wallet Bulk Payment",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Your transaction done successfully!\nYour transaction status is {{doc.status}}",
+ "modified": "2024-04-15 13:13:27.410849",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Bulk Payment",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.name }}",
+ "value_changed": "status"
+}

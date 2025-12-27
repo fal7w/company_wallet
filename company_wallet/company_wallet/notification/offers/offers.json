@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.docstatus==1",
+ "creation": "2024-04-15 14:14:14.543421",
+ "custom_firebase_notification": 1,
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Offer Detail",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "{{doc.subject}},\n{{doc.text}}",
+ "modified": "2024-04-17 14:23:09.059607",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Offers",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.name }}",
+ "value_changed": "published"
+}

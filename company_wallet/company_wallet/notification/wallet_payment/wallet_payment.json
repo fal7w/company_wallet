@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.docstatus==1",
+ "creation": "2024-03-16 12:24:55.758758",
+ "custom_firebase_notification": 1,
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Wallet Payment",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 1,
+ "is_standard": 1,
+ "message": "{{ _(\"Your transaction status is: {0}\".format(doc.status)) }}",
+ "method": "after_update",
+ "modified": "2024-07-06 13:24:50.090004",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Payment",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.name }}",
+ "value_changed": "status"
+}

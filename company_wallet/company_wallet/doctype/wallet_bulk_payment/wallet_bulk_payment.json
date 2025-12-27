@@ -1,0 +1,329 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-24 09:28:06.707624",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wallet_company",
+  "payment_channel",
+  "remittance_provider",
+  "wallet_provider",
+  "column_break_tjhh",
+  "bulk_payment_template",
+  "title",
+  "column_break_cojr",
+  "posting_date",
+  "naming_series",
+  "status",
+  "totals_section",
+  "total",
+  "total_in_words",
+  "deduct_commission_from_amount",
+  "column_break_xfds",
+  "currency",
+  "total_fee",
+  "total_real_amount",
+  "column_break_dfmz",
+  "transaction_number",
+  "fee_currency",
+  "transactions_section",
+  "wallet_bulk_payment_transactions",
+  "get_bulk_customer_info",
+  "section_break_srhu",
+  "remark",
+  "section_break_w1ry",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cojr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_channel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Channel",
+   "options": "Payment Channel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transactions_section",
+   "fieldtype": "Section Break",
+   "label": "Transactions"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "wallet_bulk_payment_transactions",
+   "fieldtype": "Table",
+   "label": "Wallet Bulk Payment Transactions",
+   "options": "Wallet Bulk Payment Transaction"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wallet Bulk Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_srhu",
+   "fieldtype": "Section Break",
+   "label": "Other"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CW-WBP-.YYYY.-."
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": ".currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bulk_payment_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bulk Payment Template",
+   "options": "Bulk Payment Template"
+  },
+  {
+   "fieldname": "column_break_xfds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Fee",
+   "no_copy": 1,
+   "options": "fee_currency",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fee_currency",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Fee Currency",
+   "no_copy": 1,
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "column_break_dfmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Transaction Number",
+   "no_copy": 1,
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tjhh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "fieldname": "remittance_provider",
+   "fieldtype": "Link",
+   "label": "Remittance Provider",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "options": "Remittance Provider"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Wallet Transfer\"",
+   "fetch_from": "wallet_company.wallet_provider",
+   "fieldname": "wallet_provider",
+   "fieldtype": "Link",
+   "label": "Wallet Provider",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Wallet Transfer\"",
+   "options": "Remittance Provider",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.__islocal ? 0 : 1",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nApproved\nRejected",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_w1ry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_in_words",
+   "fieldtype": "Data",
+   "label": "Total In Words",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "get_bulk_customer_info",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Get Bulk Customer Info",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_commission_from_amount",
+   "fieldtype": "Check",
+   "label": "Deduct Commission From Amount"
+  },
+  {
+   "fieldname": "total_real_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Real Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Wallet Payment Log",
+   "link_fieldname": "voucher_no"
+  }
+ ],
+ "modified": "2024-07-21 15:43:55.149187",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Bulk Payment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

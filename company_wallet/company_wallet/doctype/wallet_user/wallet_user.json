@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-05 07:36:16.682269",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "disabled",
+  "wallet_company",
+  "mobile_no",
+  "email",
+  "first_login",
+  "column_break_hyxt",
+  "first_name",
+  "last_name",
+  "full_name",
+  "user",
+  "column_break_pmsw",
+  "language",
+  "time_zone",
+  "otp",
+  "otp_expiry_time",
+  "type_section",
+  "type",
+  "column_break_sykh",
+  "role"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "no_copy": 1,
+   "options": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "column_break_hyxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pmsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Autocomplete",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_section",
+   "fieldtype": "Section Break",
+   "label": "Type"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "no_copy": 1,
+   "options": "\nMain User\nSub User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sykh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role",
+   "options": "Role Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "no_copy": 1,
+   "options": "User",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "otp",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "OTP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "otp_expiry_time",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "OTP Expiry Time",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "first_login",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "First Login",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Multi Authorization Rule",
+   "link_fieldname": "wallet_user"
+  }
+ ],
+ "modified": "2024-07-14 11:10:06.241863",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet User",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Checker",
+   "share": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1
+}

@@ -1,0 +1,35 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-04-21 11:31:52.191044",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 14,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-07-01 12:24:50.708428",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Company Account Statement",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Wallet Company",
+ "report_name": "Wallet Company Account Statement",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Wallet Reviewer"
+  },
+  {
+   "role": "Wallet Admin"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "System User"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-24 09:25:45.107917",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_yyoi",
+  "express_number",
+  "column_break_6moy",
+  "status",
+  "recipient_section",
+  "recipient",
+  "column_break_phxw",
+  "recipient_phone",
+  "amounts_section",
+  "amount",
+  "real_amount",
+  "column_break_jeqh",
+  "fee_amount",
+  "section_break_gmlv",
+  "wallet_payment_log",
+  "column_break_xbyq",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "recipient_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_phxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jeqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fee Amount",
+   "no_copy": 1,
+   "non_negative": 1,
+   "options": "fee_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "express_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Express Number",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "section_break_gmlv",
+   "fieldtype": "Section Break",
+   "label": "Other"
+  },
+  {
+   "fieldname": "wallet_payment_log",
+   "fieldtype": "Link",
+   "is_virtual": 1,
+   "label": "Wallet Payment Log",
+   "no_copy": 1,
+   "options": "Wallet Payment Log"
+  },
+  {
+   "fieldname": "column_break_6moy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Status",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_xbyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Long Text",
+   "label": "Remark"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "column_break_yyoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "real_amount",
+   "fieldtype": "Currency",
+   "label": "Real Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-21 15:45:38.101539",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Bulk Payment Transaction",
+ "owner": "Administrator",
+ "permissions": [],
+ "queue_in_background": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

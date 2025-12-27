@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-10 00:25:07.534155",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "user",
+  "amount_more_than",
+  "currency",
+  "accept_by",
+  "role_for_accept",
+  "user_for_accept"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Wallet Company"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "amount_more_than",
+   "fieldtype": "Currency",
+   "label": "Amount More Than"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "accept_by",
+   "fieldtype": "Select",
+   "label": "Accept By",
+   "options": "Role\nUser"
+  },
+  {
+   "fieldname": "role_for_accept",
+   "fieldtype": "Link",
+   "label": "Role for Accept",
+   "options": "Role"
+  },
+  {
+   "fieldname": "user_for_accept",
+   "fieldtype": "Data",
+   "label": "User for Accept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-10 01:19:02.760311",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:subject",
+ "creation": "2024-02-10 11:07:10.468683",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_s11g",
+  "subject",
+  "type",
+  "address",
+  "column_break_8fef",
+  "latitude",
+  "longitude",
+  "area",
+  "mapping_selection_section",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_s11g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Branch\nAgent\nATM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8fef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "X Coordinate"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Y Coordinate"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "area"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "mapping_selection_section",
+   "fieldtype": "Section Break",
+   "label": "Mapping Selection"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-14 11:12:34.952602",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company Location",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "share": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Checker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  },
+  {
+   "read": 1,
+   "role": "Guest"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

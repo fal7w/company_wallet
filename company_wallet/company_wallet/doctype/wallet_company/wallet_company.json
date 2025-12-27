@@ -1,0 +1,299 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company_name",
+ "creation": "2024-01-10 00:10:39.316955",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dummy",
+  "company_name",
+  "main_user",
+  "organization_id",
+  "company_logo",
+  "creating_date_from_wallet_provider",
+  "column_break_ykbn",
+  "disabled",
+  "wallet_identifier",
+  "wallet_provider",
+  "path_copy",
+  "company_prefix",
+  "section_break_ekqc",
+  "description",
+  "section_break_vrcm",
+  "path",
+  "token",
+  "password"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "main_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Main User",
+   "no_copy": 1,
+   "options": "Wallet User",
+   "read_only": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_ykbn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_ekqc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_vrcm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "path",
+   "fieldtype": "Password",
+   "hidden": 1,
+   "label": "Path",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Password",
+   "hidden": 1,
+   "label": "Token",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "wallet_identifier",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Identifier",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "hidden": 1,
+   "label": "Password",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wallet_provider",
+   "fieldtype": "Data",
+   "label": "Wallet Provider",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "dummy",
+   "fieldtype": "Check",
+   "label": "Dummy",
+   "permlevel": 1
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "path_copy",
+   "fieldtype": "Data",
+   "label": "Path",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "description": "Same registered date as in wallet provider system.",
+   "fieldname": "creating_date_from_wallet_provider",
+   "fieldtype": "Datetime",
+   "label": "Creating Date From Wallet Provider",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
+  },
+  {
+   "fieldname": "company_prefix",
+   "fieldtype": "Data",
+   "label": "Company Prefix",
+   "length": 5,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "organization_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Organization Id",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Users",
+   "link_doctype": "Wallet User",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Users",
+   "link_doctype": "Multi Authorization Rule",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Payments",
+   "link_doctype": "Wallet Payment",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Payments",
+   "link_doctype": "Wallet Payment Log",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Bulk",
+   "link_doctype": "Wallet Bulk Payment",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Bulk",
+   "link_doctype": "Bulk Payment Template",
+   "link_fieldname": "wallet_company"
+  },
+  {
+   "group": "Bulk",
+   "link_doctype": "Payment Query Reference",
+   "link_fieldname": "wallet_company"
+  }
+ ],
+ "modified": "2024-07-29 10:33:54.861304",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Company",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_name",
+ "track_changes": 1
+}

@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-02-28 10:52:15.640950",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_z3c8",
+  "posting_date",
+  "column_break_5ehj",
+  "offer",
+  "column_break_7sqx",
+  "user"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_z3c8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "offer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Offer Name",
+   "options": "Offer Detail"
+  },
+  {
+   "fieldname": "column_break_7sqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User Name",
+   "options": "User"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_5ehj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-03 13:16:36.097080",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Offer Seen Log",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

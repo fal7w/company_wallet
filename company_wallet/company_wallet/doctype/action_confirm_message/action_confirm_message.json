@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:document_type",
+ "creation": "2024-06-25 11:26:25.931530",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "section_break_xsdf",
+  "submit_message",
+  "section_break_3mdp",
+  "message_help",
+  "view_properties"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_xsdf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "submit_message",
+   "fieldtype": "HTML Editor",
+   "in_list_view": 1,
+   "label": "Submit Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3mdp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "message_help",
+   "fieldtype": "HTML",
+   "label": "Message Help",
+   "options": "<h4>Message Template Example</h4>\n\n<pre>Submit document &#123;{ doc.name }}\n\n-Amount : &#123;{ fmt_money(doc.amount, doc.currency) }} \n-Grand Total : &#123;{ fmt_money(doc.grand_total, doc.currency) }}\n\n</pre>\n\n<h4>How to get fieldnames</h4>\n\n<p>The field names you can use in your Message Template are the fields in the <b>Document Type</b> for which you are creating the template. You can find out the fields of any documents via Setup &gt; Customize Form View and selecting the document type (e.g. Payment Entry)</p>\n\n<h4>Templating</h4>\n\n<p>Templates are compiled using the Jinja Templating Language. To learn more about Jinja, <a class=\"strong\" href=\"http://jinja.pocoo.org/docs/dev/templates/\">read this documentation.</a></p>"
+  },
+  {
+   "fieldname": "view_properties",
+   "fieldtype": "Button",
+   "label": "View Properties"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-14 11:13:58.849682",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Action Confirm Message",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

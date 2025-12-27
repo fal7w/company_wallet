@@ -1,0 +1,2 @@
+{{doc.subject}},
+{{doc.text}}

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:transaction_type",
+ "creation": "2024-03-09 16:22:57.905457",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fqtn",
+  "transaction_type",
+  "transaction_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fqtn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "Transaction Type",
+   "translatable": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Int",
+   "label": "Transaction ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-06 11:43:05.305670",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Payment Channel",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "share": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Checker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

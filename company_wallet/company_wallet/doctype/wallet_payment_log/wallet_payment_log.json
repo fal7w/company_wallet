@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-24 08:14:29.435710",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "wallet_company",
+  "ref_id",
+  "message",
+  "column_break_cojr",
+  "payment_channel",
+  "service_provider",
+  "express_number",
+  "status",
+  "remark",
+  "recipient_section",
+  "recipient",
+  "column_break_phxw",
+  "recipient_phone",
+  "amounts_section",
+  "amount",
+  "currency",
+  "column_break_jeqh",
+  "fee_amount",
+  "fee_currency",
+  "refrence_section",
+  "voucher_type",
+  "request_payment_ref_id",
+  "parent_ref_id",
+  "column_break_ahra",
+  "voucher_no",
+  "bulk_transaction",
+  "section_break_gisv",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cojr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_channel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Channel",
+   "options": "Payment Channel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recipient_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_phxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Recipient Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jeqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_amount",
+   "fieldtype": "Currency",
+   "label": "Fee Amount",
+   "non_negative": 1,
+   "options": "fee_currency"
+  },
+  {
+   "fieldname": "fee_currency",
+   "fieldtype": "Link",
+   "label": "Fee Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_gisv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wallet Payment Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wallet Payment Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "refrence_section",
+   "fieldtype": "Section Break",
+   "label": "Refrence"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Voucher Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_ahra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Dynamic Link",
+   "in_standard_filter": 1,
+   "label": "Voucher No",
+   "options": "voucher_type"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CW-WPL-.YYYY.-."
+  },
+  {
+   "fieldname": "bulk_transaction",
+   "fieldtype": "Link",
+   "label": "Bulk Transaction",
+   "options": "Wallet Bulk Payment Transaction"
+  },
+  {
+   "fieldname": "express_number",
+   "fieldtype": "Data",
+   "label": "Express Number"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "ref_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Reference ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Data",
+   "label": "Message"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "request_payment_ref_id",
+   "fieldtype": "Data",
+   "label": "Request Payment Ref ID"
+  },
+  {
+   "fieldname": "parent_ref_id",
+   "fieldtype": "Data",
+   "label": "Parent Ref ID"
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Service Provider",
+   "options": "Remittance Provider",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-25 14:59:17.117087",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Payment Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

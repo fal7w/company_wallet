@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-02 10:25:22.092066",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gko2",
+  "wallet_company",
+  "naming_series",
+  "transaction_number",
+  "column_break_vebi",
+  "remittance_type",
+  "column_break_wbyl",
+  "mobile_number",
+  "section_break_4my0",
+  "beneficiary_name",
+  "status",
+  "express_number",
+  "show_express_number",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gko2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_number",
+   "fieldtype": "Link",
+   "label": "Transaction Number",
+   "options": "Wallet Payment Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vebi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remittance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Remittance Type",
+   "options": "Wallet Payment\nWallet Bulk Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wbyl",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Query Reference",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "QRY-REF-.YYYY.-."
+  },
+  {
+   "fieldname": "section_break_4my0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "beneficiary_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Beneficiary Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "express_number",
+   "fieldtype": "Password",
+   "label": "Express Number",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.express_number",
+   "fieldname": "show_express_number",
+   "fieldtype": "Button",
+   "label": "Show Express Number"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-14 11:06:48.061460",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Payment Query Reference",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

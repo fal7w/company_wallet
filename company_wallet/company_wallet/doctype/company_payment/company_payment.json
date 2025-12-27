@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-10 00:15:44.203784",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amount",
+  "column_break_ndbwj",
+  "currency",
+  "section_break_ispng",
+  "fee_amount",
+  "column_break_thuyz",
+  "company",
+  "section_break_c0mpn",
+  "payment_type",
+  "column_break_lwqhi",
+  "company_payment_provider",
+  "section_break_mwqhc",
+  "recipient_account_number",
+  "recipient_name",
+  "recipient_phone_number",
+  "reference_id",
+  "notes",
+  "amended_from",
+  "payment_entry",
+  "create_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Wallet Company"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "fee_amount",
+   "fieldtype": "Currency",
+   "label": "Fee Amount"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "label": "Payment Type",
+   "options": "Remittance\nWallet Transfer"
+  },
+  {
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "label": "Reference Id"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Company Payment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ndbwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ispng",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_thuyz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_c0mpn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lwqhi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mwqhc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Payment Entry",
+   "options": "Wallet Company Payment Entry"
+  },
+  {
+   "depends_on": "eval: doc.payment_type == 'Wallet Transfer'",
+   "fieldname": "recipient_account_number",
+   "fieldtype": "Data",
+   "label": "Wallet Account Number",
+   "mandatory_depends_on": "eval: doc.payment_type == 'Wallet Transfer'"
+  },
+  {
+   "depends_on": "eval: doc.payment_type == 'Remittance'",
+   "fieldname": "recipient_name",
+   "fieldtype": "Data",
+   "label": "Remittance Recipient Name",
+   "mandatory_depends_on": "eval: doc.payment_type == 'Remittance'"
+  },
+  {
+   "depends_on": "eval: doc.payment_type == 'Remittance'",
+   "fieldname": "recipient_phone_number",
+   "fieldtype": "Phone",
+   "label": "Remittance Recipient Phone Number",
+   "mandatory_depends_on": "eval: doc.payment_type == 'Remittance'"
+  },
+  {
+   "fieldname": "create_date",
+   "fieldtype": "Date",
+   "label": "Create Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-10 21:35:41.360953",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Company Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

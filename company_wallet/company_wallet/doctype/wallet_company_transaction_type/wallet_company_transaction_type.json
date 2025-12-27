@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-06 14:23:19.372137",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bxbq",
+  "transaction_type",
+  "transaction_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bxbq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Transaction Type"
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Transaction ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-06 14:24:47.808883",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Company Transaction Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

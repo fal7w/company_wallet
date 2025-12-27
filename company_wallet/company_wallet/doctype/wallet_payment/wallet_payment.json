@@ -1,0 +1,323 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-24 07:56:56.252654",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wallet_company",
+  "express_number",
+  "posting_date",
+  "column_break_gftz",
+  "payment_channel",
+  "remittance_provider",
+  "wallet_provider",
+  "column_break_cojr",
+  "naming_series",
+  "status",
+  "recipient_section",
+  "recipient",
+  "customer",
+  "column_break_phxw",
+  "recipient_phone",
+  "note",
+  "amounts_section",
+  "amount",
+  "currency",
+  "real_amount",
+  "deduct_commission_from_amount",
+  "column_break_jeqh",
+  "amount_in_words",
+  "fee_amount",
+  "fee_currency",
+  "section_break_gisv",
+  "amended_from",
+  "column_break_nvrj",
+  "wallet_payment_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gisv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wallet Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "wallet_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wallet Company",
+   "options": "Wallet Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cojr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_channel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Channel",
+   "options": "Payment Channel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recipient_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Remittance\""
+  },
+  {
+   "fieldname": "column_break_phxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Recipient Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jeqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fee Amount",
+   "non_negative": 1,
+   "options": "fee_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fee_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fee Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CW-WP-.YYYY.-."
+  },
+  {
+   "fieldname": "express_number",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Express Number"
+  },
+  {
+   "fieldname": "column_break_nvrj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wallet_payment_log",
+   "fieldtype": "Link",
+   "is_virtual": 1,
+   "label": "Wallet Payment Log",
+   "no_copy": 1,
+   "options": "Wallet Payment Log"
+  },
+  {
+   "fieldname": "column_break_gftz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.__islocal ? 0 : 1",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nApproved\nRejected",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "fieldname": "remittance_provider",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Remittance Provider",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Remittance\"",
+   "options": "Remittance Provider"
+  },
+  {
+   "depends_on": "eval: doc.payment_channel == \"Wallet Transfer\"",
+   "fetch_from": "wallet_company.wallet_provider",
+   "fieldname": "wallet_provider",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Wallet Provider",
+   "mandatory_depends_on": "eval: doc.payment_channel == \"Wallet Transfer\"",
+   "options": "Remittance Provider",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_in_words",
+   "fieldtype": "Data",
+   "label": "Amount In Words",
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_commission_from_amount",
+   "fieldtype": "Check",
+   "label": "Deduct Commission From Amount"
+  },
+  {
+   "fieldname": "real_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Real Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Wallet Payment Log",
+   "link_fieldname": "voucher_no"
+  }
+ ],
+ "modified": "2024-08-14 11:05:43.137486",
+ "modified_by": "Administrator",
+ "module": "Company Wallet",
+ "name": "Wallet Payment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Reviewer",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Maker",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Admin",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wallet Checker",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
